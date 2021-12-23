@@ -130,10 +130,20 @@ let searchResult =addressArr.find(SearchName);
 console.log("Result after searching "+searchResult);
 
 //UC5-Delete an element using the firstname
-function DeleteAddress(addressbook){
-    let resultAddress = SearchName(addressbook);
-    var index= addressArr.indexOf(resultAddress);
-    return index;
+// function DeleteAddress(addressbook){
+//     let resultAddress = SearchName(addressbook);
+//     var index= addressArr.indexOf(resultAddress);
+//     return index;
+// }
+// let deleteIndex=addressArr.find(DeleteAddress);
+// console.log(addressArr.splice(deleteIndex,3)+" is deleted")
+
+
+let n=0;      //UC6
+function GetTotal(a){
+   if(a!=null){
+       ++n;
+   }
+   return n;
 }
-let deleteIndex=addressArr.find(DeleteAddress);
-console.log(addressArr.splice(deleteIndex,3)+" is deleted")
+console.log("Total count of addresses "+addressArr.reduce(GetTotal,0));
