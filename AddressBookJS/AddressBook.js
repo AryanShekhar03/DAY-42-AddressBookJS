@@ -139,28 +139,32 @@ catch(e)
 // console.log(addressArr.splice(deleteIndex,3)+" is deleted")
 
 
- let n=0;      //UC6
-function GetTotal(a){
-   if(a!=null){
-       ++n;
-   }
-   return n;
-}
-console.log("Total count of addresses "+addressArr.reduce(GetTotal,0));
+//  let n=0;      //UC6
+// function GetTotal(a){
+//    if(a!=null){
+//        ++n;
+//    }
+//    return n;
+// }
+// console.log("Total count of addresses "+addressArr.reduce(GetTotal,0));
 
-//UC7
-function CheckDuplicate(a)
-{
-    if(a.lastName.includes("Singh"))
-    ++n;
-return n;
-}
-let count = addressArr.filter(CheckDuplicate);
-if(count=1)
-{
-    console.log("There is no duplicate entry for the name");
-}
-else if(count>1)
-{
-    console.log("There is duplicate entry for the given name")
-}    
+// //UC7
+// function CheckDuplicate(a)
+// {
+//     if(a.lastName.includes("Singh"))
+//     ++n;
+// return n;
+// }
+// let count = addressArr.filter(CheckDuplicate);
+// if(count=1)
+// {
+//     console.log("There is no duplicate entry for the name");
+// }
+// else if(count>1)
+// {
+//     console.log("There is duplicate entry for the given name")
+// }    
+
+//UC8
+let peopleFromCity=addressArr.filter(a=>a.city.includes("Pune"));
+console.log("People from the given city are: "+peopleFromCity);
