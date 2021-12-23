@@ -166,8 +166,8 @@ catch(e)
 // }    
 
 //UC8
-// let peopleFromCity=addressArr.filter(a=>a.city.includes("Pune"));
-// console.log("People from the given city are: "+peopleFromCity);
+let peopleFromCity=addressArr.filter(a=>a.city.includes("Pune"));
+console.log("People from the given city are: "+peopleFromCity);
 
 //UC9-Viewing person by city/state
 function ReturnCityMap(a)
@@ -178,3 +178,7 @@ function ReturnCityMap(a)
 let addressCityMap= addressArr.map(ReturnCityMap);
 console.log("Viewing the people by their city")
 console.log(addressCityMap);
+
+//UC10-Getting count of people living in a city/state
+console.log("Number of people from that city is: "+peopleFromCity.length);
+
