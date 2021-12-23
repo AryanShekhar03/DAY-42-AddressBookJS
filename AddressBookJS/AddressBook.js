@@ -98,3 +98,25 @@ catch(e){
     console.error(e);
 }
 
+//UC-3
+
+
+let addressArr = new Array();
+try
+{
+    let address1 = new AddressBook("Ram","Singh","MH79","Pune","Maharashtra",838666,8483932090,"Ram@gmail.com");
+    let address2= new AddressBook("Rahul","Gandhi","GJ66","Surat","Gujarat",718302,6654205303,"Rahul@gmail.com");
+    let address3= new AddressBook("Ramesh","Sarkar","UK17","DehraDun","UK",513302,8992705303,"Ramesh@gmail.com");
+    let address4= new AddressBook("Divya","Singh","JK59","Katra","Jammu",714302,9876505303,"Divya@gmail.com");
+
+    addressArr.push(address1);
+    addressArr.push(address2);
+    addressArr.push(address3);
+    addressArr.push(address4);
+    console.log(addressArr);
+}
+catch(e)
+{
+    console.error(e);
+}
+
