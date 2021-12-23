@@ -122,12 +122,12 @@ catch(e)
 
 //UC-4
 
-function SearchName(addressbook)
-{
-    if(addressbook.firstName=="Rahul") return addressbook;
-}
-let searchResult =addressArr.find(SearchName);
-console.log("Result after searching "+searchResult);
+// function SearchName(addressbook)
+// {
+//     if(addressbook.firstName=="Rahul") return addressbook;
+// }
+// let searchResult =addressArr.find(SearchName);
+// console.log("Result after searching "+searchResult);
 
 //UC5-Delete an element using the firstname
 // function DeleteAddress(addressbook){
@@ -139,7 +139,7 @@ console.log("Result after searching "+searchResult);
 // console.log(addressArr.splice(deleteIndex,3)+" is deleted")
 
 
-let n=0;      //UC6
+ let n=0;      //UC6
 function GetTotal(a){
    if(a!=null){
        ++n;
@@ -147,3 +147,20 @@ function GetTotal(a){
    return n;
 }
 console.log("Total count of addresses "+addressArr.reduce(GetTotal,0));
+
+//UC7
+function CheckDuplicate(a)
+{
+    if(a.lastName.includes("Singh"))
+    ++n;
+return n;
+}
+let count = addressArr.filter(CheckDuplicate);
+if(count=1)
+{
+    console.log("There is no duplicate entry for the name");
+}
+else if(count>1)
+{
+    console.log("There is duplicate entry for the given name")
+}    
